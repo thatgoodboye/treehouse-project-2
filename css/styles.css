@@ -1,0 +1,241 @@
+
+/* ======================
+    Global
+====================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #595959;
+    text-align: center;
+    background-color: #fafafa;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.clearfix::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.container {
+    margin: auto;
+    max-width: 1024px;
+    padding-left: 2em; /* 32 */
+    padding-right: 2em; /* 32 */
+}
+
+/* ======================
+    Typography
+====================== */
+
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.light-script {
+    padding: 2em 0; /* 32 */
+    font-weight: 300; /* light */
+    font-size: 1.25em; /* 20 */
+}
+
+.section-title {
+    margin: 0 0 3em; /* 48 */
+    font-size: 1rem; /* 16 */
+}
+
+/* ======================
+    Navigation
+====================== */
+
+.main-nav a,
+.foot-nav a {
+    padding: 1em; /* 16 */
+    display: block;
+}
+
+.main-nav a {
+    background-color: #fff;
+}
+
+.main-nav li {    
+    margin-bottom: .5em; /* 8 */
+}
+
+.foot-nav {
+    float: right;
+}
+
+.foot-nav li {
+    display: none;
+}
+
+.foot-nav .b2t {
+    display: inline-block;
+}
+
+/* ======================
+    About
+====================== */
+
+section#about img {
+    width: 75%;
+}
+
+/* ======================
+    Portfolio
+====================== */
+
+section#portfolio {
+    margin: 0 -2em; /* -32 */
+    padding: 3em 1em 0; /* 48 16 0 */
+    background-color: #fff;
+}
+
+section#portfolio p {
+    padding: 0 1em; /* 16 */
+}
+
+section#portfolio img {
+    width: 100%;
+}
+
+.col {
+    width: 100%;
+    margin-bottom: 2em; /* 32 */
+}
+    
+/* ======================
+    Contact
+====================== */
+
+section#contact {
+    padding: 3em 0; /* 48 */
+    text-align: center;
+}
+
+.c2a {
+    width: 80%;
+    margin: 0 0 2em; /* 32 */
+    display: inline-block;
+}
+
+/* ======================
+    Footer
+====================== */
+
+footer {
+    padding: 1em 0; /* 48 */
+    border-top: 1px solid #c2c2c2;
+}
+
+.name {
+    float: left;
+}
+
+/* ======================
+    Media
+====================== */
+
+/* tablet */
+@media (min-width: 768px) {
+    
+    header {
+        padding-top: 3em; /* 48 */
+    }
+    
+    h1 {
+        font-size: 1.5em; /* 24 */
+    }
+    
+    .main-nav li {
+        display: inline-block;
+        margin: 0;
+    }
+    
+    .main-nav a {
+        background-color: transparent;
+    }
+
+    .foot-nav li {
+        display: inline-block;
+    }
+
+    .foot-nav .b2t {
+        display: none;
+    }
+
+    section#portfolio {
+        padding-left: 1em; /* 16 */
+        padding-right: 1em; /* 16 */
+    }
+
+    section#about img {
+        width: 40%;
+        float: right;
+        margin-left: 1em;
+    }        
+    
+    section#about p {
+        margin: 0;
+        text-align: left;
+    }
+
+    .col {
+        float: left;
+        width: 50%;
+        padding: 0 1em; /* 16 */
+    }
+
+    /* Fix for an issue in which specific 
+    screen sizes broke the column layout. */
+    .col:nth-of-type(odd) {
+        clear: left;
+    }
+
+    .c2a {
+        width: 60%;
+    }
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+    
+    h1 {
+        float: left;
+    }
+    
+    nav {
+        float: right;
+    }
+    
+    section#about p {
+        font-size: 1.5em; /* 24 */
+    }
+    
+    .col {
+        margin-bottom: 3em; /* 48 */
+        width: 33.33%
+    }
+
+    /* Fix for an issue in which specific 
+    screen sizes broke the column layout. */
+    .col:nth-of-type(odd) {
+        clear:initial
+    }
+
+    .col:nth-of-type(3n+4) {
+        clear: left;
+    }
+}
