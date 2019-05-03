@@ -14,6 +14,11 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+main {    
+    margin: 0 -2em; /* -32 */
+    background-color: #fff;    
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -28,7 +33,7 @@ ul {
 
 .container {
     margin: auto;
-    max-width: 1024px;
+    max-width: 1400px;
     padding-left: 2em; /* 32 */
     padding-right: 2em; /* 32 */
 }
@@ -45,7 +50,6 @@ a:visited {
 }
 
 .light-script {
-    padding: 2em 0; /* 32 */
     font-weight: 300; /* light */
     font-size: 1.25em; /* 20 */
 }
@@ -63,6 +67,10 @@ a:visited {
 .foot-nav a {
     padding: 1em; /* 16 */
     display: block;
+
+    -webkit-transition: color 150ms linear;
+    -ms-transition: color 150ms linear;
+    transition: color 150ms linear;
 }
 
 .main-nav a {
@@ -85,29 +93,64 @@ a:visited {
     display: inline-block;
 }
 
+nav a:hover {
+    color: #D4AF37; /* metallic gold */
+    
+    -webkit-transition: color 150ms linear;
+    -ms-transition: color 150ms linear;
+    transition: color 150ms linear;
+}
+
 /* ======================
     About
 ====================== */
 
-section#about img {
+#about {
+    padding: 2em 0; /* 32 0 16 */
+}
+
+#about img {
     width: 75%;
+}
+
+/* ======================
+    Skills
+====================== */
+
+#skills {
+    padding: 3em 1em 1em; /* 48 16 16 */
+}
+
+#skills img {
+    width: 100%;
+}
+
+#skills li {
+    width: 30%;
+    padding: 0 .5em;
+    display: inline-block;
+}
+
+.skill-title {
+    margin-top: 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    font-family: 'Source Code Pro', monospace;
 }
 
 /* ======================
     Portfolio
 ====================== */
 
-section#portfolio {
-    margin: 0 -2em; /* -32 */
-    padding: 3em 1em 0; /* 48 16 0 */
-    background-color: #fff;
+#portfolio {
+    padding: 3em 1em 0; /* 48 16 */
 }
 
-section#portfolio p {
+#portfolio p {
     padding: 0 1em; /* 16 */
 }
 
-section#portfolio img {
+#portfolio img {
     width: 100%;
 }
 
@@ -120,7 +163,7 @@ section#portfolio img {
     Contact
 ====================== */
 
-section#contact {
+#contact {
     padding: 3em 0; /* 48 */
     text-align: center;
 }
@@ -160,8 +203,8 @@ footer {
     }
     
     .main-nav li {
-        display: inline-block;
         margin: 0;
+        display: inline-block;
     }
     
     .main-nav a {
@@ -176,18 +219,27 @@ footer {
         display: none;
     }
 
-    section#portfolio {
+    #skills li {
+        width: 20%;
+        padding: 0 1em;
+    }
+
+    .skill-title {
+        font-size: 1.5em;
+    }
+
+    #portfolio {
         padding-left: 1em; /* 16 */
         padding-right: 1em; /* 16 */
     }
 
-    section#about img {
+    #about img {
         width: 40%;
         float: right;
         margin-left: 1em;
     }        
     
-    section#about p {
+    #about p {
         margin: 0;
         text-align: left;
     }
@@ -220,13 +272,17 @@ footer {
         float: right;
     }
     
-    section#about p {
+    #about p {
         font-size: 1.5em; /* 24 */
     }
     
+    #skills li {
+        width: 15%;
+    }
+
     .col {
+        width: 33.33%;
         margin-bottom: 3em; /* 48 */
-        width: 33.33%
     }
 
     /* Fix for an issue in which specific 
